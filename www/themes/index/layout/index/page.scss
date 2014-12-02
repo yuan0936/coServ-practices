@@ -1,0 +1,13 @@
+@import "coserv.scss";
+@include link;
+
+body {
+	@include wrapper;
+	font-family: $ff1;
+	color: $fc1;
+	-webkit-font-smoothing: antialiased; 
+}
+
+#pgHead, #pgFooter, #pgContainer {
+	@include wrapper;
+}

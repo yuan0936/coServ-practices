@@ -1,0 +1,20 @@
+@import "coserv.scss";
+@include link;
+
+.footer {  
+  font-size: $fs1;
+  color: #818181;
+  background: #fff;
+  border-top: 2px solid #ddd !important;
+  padding-top: 30px;
+  padding-bottom: 30px; 
+  margin-bottom: 0; 
+}
+
+/*mobile*/
+.mobile.footer {
+  font-size: 2em !important;  
+  border-top-width: 4px !important;
+  padding-top: 50px !important; 
+  padding-bottom: 50px !important;
+} 

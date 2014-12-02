@@ -1,0 +1,240 @@
+@import "coserv.scss";
+@include link;
+
+.wrapper {
+  margin-top: 51px;  
+  padding: 50px 10px 50px 20px;
+  background: #dfdfdf;
+  font-family: $ff1; 
+  font-style: normal;
+  .article {  
+    @include border-radius(20px);
+    margin: 0px 230px 0px 50px;   
+    margin-right: 230px;
+    padding: $fs1*2  $fs1*4 $fs1*8;
+    padding-top: $fs1*2;
+    padding-right: $fs1*4;
+    min-height: 800px; 
+    height: auto;     
+    position: relative;
+    overflow: visible;
+    background: #fff;  
+    color: $fc4;
+    font-size: $fs1 * 0.85;
+    font-family: $ff1;
+    font-weight: normal !important;
+    //標題
+    .title {
+      color: $fc3;  
+      font-size: $fs1 * 1.2;
+      line-height: $fs1 * 2; 
+      padding-bottom: $fs1;       
+      @include border-bottom(1px, solid, #2EA0D1);        
+      h1 {
+        font-weight: bolder;  
+        @include pa(0.2em, 0.2em);
+      }
+      h3 {
+         @include pa(1em, 1em);
+      }
+    }
+    //時間&作者
+    .sub {
+      margin: 1em 0 2em;
+      @include pa(1em, 1em);
+      text-align: right;  
+      .strTime, .dspName {
+        font-size: $fs1;
+        color: $fc3;
+        line-height: $fs1 * 2;
+      }
+      .dspName {
+        margin-left: $fs1;
+      }
+    }
+    //內文
+    .section {  
+      p {  
+        font-size: $fs1 * 1.5;
+        font-weight: normal !important;
+        line-height: $fs1 * 1.5;
+        color: #666;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        word-wrap: break-word;    
+      }
+      h2 {        
+        color: $fc3 !important;
+      }
+      h3.subtitle, h3 {
+        font-weight: 600;
+        color: $fc3;
+        line-height: $fs1 * 2;              
+        margin-top: $fs1;  
+      }
+      h4, h5 {
+        font-weight: bold;
+      }
+      h5{
+        font-size: $fs1 * 1.5;
+      }        
+      p + h3,   
+      p + .subtitle,
+      pre + p,
+      pre + .subtitle,
+      .subtitle + p.subtopic,
+      pre + h4,
+      pre + h5,
+      p + h4,
+      p + h5,
+      div + h4,
+      div + h5,
+      ul + h4,
+      ul + h5 {
+        margin-top: $fs1 * 1.7;
+      }
+      pre {
+        margin: 0px;
+        padding: 5px;
+        background: #F0F0F0;
+        border: none;
+        width: $w1;
+        overflow: auto !important;
+      }            
+      pre code {
+        max-width: initial;
+        font-size: $fs1 * 1.1;       
+        color: #777;        
+        word-wrap: keep-all !important;
+        word-break: break-all !important;
+        @include border-radius(2px);
+        overflow: initial;
+      }          
+      ul li, ol li {
+        font-size: $fs1 * 1.5;
+        line-height: $fs1 * 1.5;       
+        color: #666;
+        a {
+          color: #2EA0D1;
+          &:hover {
+            color: #3067A5;
+            text-decoration: none;
+          }
+        }
+        p {
+          font-size: $fs1 * 1.5;
+          font-weight: normal;
+        }           
+      }  
+      ul.no { 
+        -webkit-padding-start: 0px !important;
+        li {  
+          list-style-type: none;          
+        }
+      }
+      ul.l_roman li {
+        list-style-type: lower-roman;
+        font-size: $fs1 * 1.5;
+        p {
+          font-size: $fs1 * 1.5;
+          font-weight: normal;
+        }
+      }  
+      ul.disc li {
+        list-style-type: disc;
+        font-size: $fs1 * 1.5;
+        p {
+          font-size: $fs1;
+          font-weight: normal;
+        }
+      }     
+    }
+    .gotop {
+      display: none;
+      position: fixed;
+      bottom: 160px;
+      right: 255px;
+      font-size: $fs1 * 3;
+      color: rgba(200,200,200,0.5);
+      &:hover {
+        color: rgba(150,150,150,0.5);
+      }
+    }
+  }
+  //右側清單
+  .viewside {
+    width: 230px;  
+    min-height: 600px;    
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    overflow: visible;
+    top: 60px;
+    right: 0px;   
+    @include transition(margin-left, .3s, ease);           
+  }  
+}
+.snippet-num {
+  font-size: $fs1 * 0.7;
+  li {
+    color: #999 !important;
+  }  
+}
+
+/* mobile */
+.mobile.wrapper { 
+  margin-top: 99px !important;
+  .article {
+    margin-left: 10px !important;
+    margin-right: 20px !important;
+    padding-top: 100px !important;
+    padding-right: 20px !important;
+    font-weight: normal !important;
+  }
+  h1 { 
+    font-size: 4.5em !important; 
+    line-height: 1.2em !important;
+    padding-right: 0.6em !important;
+  }
+  h3 {
+    font-size: 3.6em !important;
+    line-height: 1.2em !important;
+  }
+  h4 {
+    font-size: 3.4em !important;
+  }
+  h5 {
+    font-size: 3.2em !important;
+  }
+  p {
+    font-size: 3.2em !important;
+    line-height: 1.2em !important;
+  }
+  ul li {
+    font-size: 3.2em !important;
+    line-height: 1.2em !important;
+  }
+  pre {
+    width: 100% !important;
+    overflow: auto !important;
+    //padding-left: 1em;    
+  }
+  pre code {
+    width: 100% !important;
+    font-size: 3em !important;   
+    word-wrap: keep-all !important;
+    word-break: break-all !importantl;
+    overflow: auto !important;
+  }
+  .strTime,.mobile .dspName {
+    font-size: 3em !important;  
+  }
+  .gotop {
+    right: 60px !important;
+    bottom: 230px !important;
+    font-size: 5em !important;
+  }
+  .snippet-num {
+    padding-left: 8em !important;
+  }
+}
